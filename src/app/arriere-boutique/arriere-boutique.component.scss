@@ -1,5 +1,13 @@
 li button {
   background: inherit;
   border: none;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+button {
   cursor: pointer;
 }
