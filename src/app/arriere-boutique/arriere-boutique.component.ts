@@ -22,7 +22,12 @@ export class ArriereBoutiqueComponent {
     this.aFaireInput = '';
   }
 
-  fait(aFaire: number) {
-    this.aFaireListe.splice(aFaire, 1);
+  fait(aFaireIndex: number) {
+    this.aFaireListeSignal
+      .update(liste => {
+        liste.splice(aFaireIndex, 1);
+        return liste;
+      });
+    this.aFaireListe.splice(aFaireIndex, 1);
   }
 }
