@@ -1,0 +1,16 @@
+<h2>arriere-boutique </h2>
+
+<form>
+  <input [(ngModel)]="aFaireInput" type="text" name="aFaireInput"/>
+  <button (click)="ajouterDansLaListe()"> Ajouter</button>
+</form>
+
+
+<ul>
+  @for (aFaire of aFaireListe; track aFaire; let index = $index) {
+    <li>
+      {{ aFaire }}
+      <button (click)="fait(index)">✅</button>
+    </li>
+  }
+</ul>
