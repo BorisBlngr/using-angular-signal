@@ -1,4 +1,4 @@
-import {Component, Input, signal} from '@angular/core';
+import {Component, input} from '@angular/core';
 
 @Component({
   selector: 'app-vitrine',
@@ -8,5 +8,5 @@ import {Component, Input, signal} from '@angular/core';
   styleUrl: './vitrine.component.scss'
 })
 export class VitrineComponent {
-  @Input() aFaireListeSignal = signal([] as string[]);
+  aFaireListeSignal = input.required<string[]>();
 }
