@@ -1,5 +1,7 @@
 <h2>Vitrine</h2>
 <ul>
+  <input type="text" [(ngModel)]="secondSignal">
+
   @for (aFaire of aFaireListeSignal(); track aFaire; let index = $index) {
     <li> {{ aFaire }}</li>
   }
