@@ -24,7 +24,7 @@ export class ArriereBoutiqueComponent {
     this.aFaireListeSignal
       .update(liste => {
         liste.splice(aFaireIndex, 1);
-        return liste;
+        return [...liste];
       });
   }
 }
