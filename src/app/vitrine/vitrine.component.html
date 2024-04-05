@@ -1,6 +1,6 @@
 <h2>Vitrine</h2>
 <ul>
-  @for (aFaire of aFaireListe; track aFaire; let index = $index) {
+  @for (aFaire of aFaireListeSignal(); track aFaire; let index = $index) {
     <li> {{ aFaire }}</li>
   }
 </ul>

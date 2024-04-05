@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, signal} from '@angular/core';
 
 @Component({
   selector: 'app-vitrine',
@@ -9,5 +9,5 @@ import {Component, Input} from '@angular/core';
 })
 export class VitrineComponent {
   @Input() aFaireListe: string[] = [];
-
+  @Input() aFaireListeSignal = signal([] as string[]);
 }
