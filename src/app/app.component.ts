@@ -6,6 +6,5 @@ import {Component, signal, WritableSignal} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  aFaireList: string[] = ['course', 'escalade', 'entrainement', 'lire ce fameux livre', 'Aller à cette conférence'];
   aFaireListSignal: WritableSignal<string[]> = signal(['course', 'escalade', 'entrainement', 'lire ce fameux livre', 'Aller à cette conférence']);
 }

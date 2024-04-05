@@ -8,6 +8,5 @@ import {Component, Input, signal} from '@angular/core';
   styleUrl: './vitrine.component.scss'
 })
 export class VitrineComponent {
-  @Input() aFaireListe: string[] = [];
   @Input() aFaireListeSignal = signal([] as string[]);
 }

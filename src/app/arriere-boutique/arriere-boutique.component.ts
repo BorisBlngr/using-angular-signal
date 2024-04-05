@@ -12,11 +12,9 @@ import {FormsModule} from '@angular/forms';
 })
 export class ArriereBoutiqueComponent {
   aFaireInput: string = '';
-  @Input() aFaireListe: string[] = [];
   @Input() aFaireListeSignal: WritableSignal<string[]> = signal([]);
 
   ajouterDansLaListe() {
-    this.aFaireListe.push(this.aFaireInput);
     this.aFaireListeSignal
       .update(liste => [...liste, this.aFaireInput]);
     this.aFaireInput = '';
@@ -28,6 +26,5 @@ export class ArriereBoutiqueComponent {
         liste.splice(aFaireIndex, 1);
         return liste;
       });
-    this.aFaireListe.splice(aFaireIndex, 1);
   }
 }
