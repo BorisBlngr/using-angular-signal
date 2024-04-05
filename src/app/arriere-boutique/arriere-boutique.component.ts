@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, signal, WritableSignal} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -13,9 +13,12 @@ import {FormsModule} from '@angular/forms';
 export class ArriereBoutiqueComponent {
   aFaireInput: string = '';
   @Input() aFaireListe: string[] = [];
+  @Input() aFaireListeSignal: WritableSignal<string[]> = signal([]);
 
   ajouterDansLaListe() {
     this.aFaireListe.push(this.aFaireInput);
+    this.aFaireListeSignal
+      .update(liste => [...liste, this.aFaireInput]);
     this.aFaireInput = '';
   }
 
