@@ -7,4 +7,6 @@ import {Component, signal, WritableSignal} from '@angular/core';
 })
 export class AppComponent {
   aFaireListSignal: WritableSignal<string[]> = signal(['course', 'escalade', 'entrainement', 'lire ce fameux livre', 'Aller à cette conférence']);
+
+  secondSignal = signal('toto');
 }
