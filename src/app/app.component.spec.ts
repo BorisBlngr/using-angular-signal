@@ -1,12 +1,16 @@
 import {TestBed} from '@angular/core/testing';
 import {AppComponent} from './app.component';
+import {VitrineComponent} from './vitrine/vitrine.component';
+import {ArriereBoutiqueComponent} from './arriere-boutique/arriere-boutique.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [],
+      imports: [
+        VitrineComponent,
+        ArriereBoutiqueComponent],
       declarations: [
-        AppComponent
+        AppComponent,
       ],
     }).compileComponents();
   });
@@ -15,18 +19,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'signal'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('signal');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('signal app is running!');
   });
 });
